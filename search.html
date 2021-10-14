@@ -56,7 +56,12 @@
     "eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty",
     "twenty one","twenty two","twenty three","twenty four"];
     var triesCount = 0;
-    var animalLocation = 13;
+    var animalLocation = Math.floor(Math.random()*24);
+    function newGame(){
+            triesCount = 0
+            animalLocation = Math.floor(Math.random()*24)
+            
+    }
     function check(position){
       if(animalLocation===position){
         image = document.getElementById(ids[animalLocation])
