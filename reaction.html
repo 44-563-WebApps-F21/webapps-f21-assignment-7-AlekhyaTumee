@@ -27,14 +27,10 @@
         console.log(myTime)
     }
     function startTime(){
-        let max = 10
-        let min = 2
-        count = Math.floor(Math.random()* (max - min + 1) + min)
-        target = document.getElementById("target")
-        for(i=count; i>=0; i--) {
-        setTimeout(function(i){
-            document.getElementById("countdown").innerHTML = i;
-        }, (count-i)*1000,i)
+        for(i=0;i<4;i++){
+            setTimeout(function(){
+            document.getElementById("countdown").innerHTML = i
+            }, (3-i)*1000)
         }
         setTimeout(() => {
         if(myTime == undefined){
@@ -44,7 +40,7 @@
                 diff = buttonTime-myTime
                 target.innerHTML = "Time was "+ diff
         }
-        }, count*1000)
+        }, 3000)
     }
   </script>
 
